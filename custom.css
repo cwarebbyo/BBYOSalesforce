@@ -1,0 +1,98 @@
+/* hide register button */
+button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display: none;
+}
+
+/* hide register button */
+button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display:none;
+}
+
+/* hide get tickets button on desktop and mobile */
+.get-tickets-button, .mobile-registration-action-container.ng-star-inserted {
+ display: none !important;
+}
+
+/* change color of calendar day icon */
+.event-keyword.ng-star-inserted {
+    color: #25e4de;
+}
+
+/* Hide closed icon on event page */
+.floating-label.desktop.ng-star-inserted {
+    display: none;
+}
+
+/* Registration confirmation message size */
+h1.ng-star-inserted {
+    font-size: larger;
+}
+
+/* Hide price on event listing */
+.product-item__price.ng-star-inserted {
+    display: none;
+}
+
+/* change color of calendar day icon on calendar list view */
+.bt-date-badge__month {
+   background-color: #25e4de !important;
+   color: #1F2937 !important;
+}
+
+ 
+/* hide and change color of price background on calendar list view */
+.product-item__price {
+   /* background-color: #5BA55E  !important; */
+   display: none !important;
+}
+
+/* full width styling */
+
+/* hide hero background image */
+img.hero-image.ng-star-inserted {
+    display: none !important;
+}
+
+/* apply neon pistachio to seltzer gradient */
+.section-wrapper.hero-wrapper {
+	background: linear-gradient(to bottom, #80e83a, #25e4de) !important;
+}
+
+/* hide register button */
+button.register-button.ng-star-inserted {
+	display: none !important;
+}
+
+/* hide bottom sign-up section */
+section.section-wrapper.event-register-wrapper.ng-star-inserted {
+	display: none !important;
+}
+
+/* change headline font size */
+h1 .content {
+	font-size: 2rem !important;
+}
+
+/* change date font size */
+.event-date.ng-star-inserted {
+	font-size: 1.25rem !important;
+}
+
+.event-time.ng-star-inserted {
+	font-size: 1.25rem !important;
+}
+
+
+/* hide event location on first page */
+.event-location-wrapper.ng-star-inserted {
+	display: none !important;
+}
+
+/* update discount code apply button style */
+.apply-button {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+    text-transform: capitalize;
+    background-color: var(--primaryColorOriginal) !important;
+    color: var(--primaryColorContrast) !important;
+}
