@@ -64,9 +64,10 @@ img.hero-image {
     display: none !important;
 }
 
-/* apply neon pistachio to seltzer gradient */
+/* apply neon pistachio to seltzer gradient and remove minimum height */
 .section-wrapper.hero-wrapper {
-	background: linear-gradient(to bottom, #80e83a, #25e4de) !important;
+    background: linear-gradient(to bottom, #80e83a, #25e4de) !important;
+    min-height: 0 !important;
 }
 
 /* hide register button */
