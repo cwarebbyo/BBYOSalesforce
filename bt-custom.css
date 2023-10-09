@@ -136,3 +136,8 @@ h1 .content {
 .product-item__date {
 	display: inline-flex !important;
 }
+
+/* hide closed banner */
+.floating-label.desktop {
+	display: none !important;
+}
