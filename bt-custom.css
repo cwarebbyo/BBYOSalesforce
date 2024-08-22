@@ -143,6 +143,6 @@ h1 .content {
 }
 
 /* hide back button on events */
-.content-container.navbar {
+button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base {
 	display: none !important;
 }
