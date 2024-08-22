@@ -151,3 +151,4 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base {
 #userwayAccessibilityIcon {
 	display: none !important;
 }
+div[title="Accessibility Menu"] { display: none !important; }
