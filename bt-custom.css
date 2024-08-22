@@ -143,12 +143,6 @@ h1 .content {
 }
 
 /* hide back button on events */
-button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base {
-	display: none !important;
+button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
+        display: none !important;
 }
-
-/* hide accessibility button */
-#userwayAccessibilityIcon {
-	display: none !important;
-}
-div[title="Accessibility Menu"] { display: none !important; }
