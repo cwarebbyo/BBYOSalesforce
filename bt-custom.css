@@ -146,3 +146,8 @@ h1 .content {
 button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base {
 	display: none !important;
 }
+
+/* hide accessibility button */
+#userwayAccessibilityIcon {
+	display: none !important;
+}
