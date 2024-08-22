@@ -141,3 +141,8 @@ h1 .content {
 .floating-label.desktop {
 	display: none !important;
 }
+
+/* hide back button on events */
+.content-container.navbar {
+	display: none !important;
+}
