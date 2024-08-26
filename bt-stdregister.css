@@ -126,6 +126,6 @@ h1 .content {
 }
 
 /* hide search bar */
-.search-wrapper {
+.search-wrapper, .language-selector {
 	display: none !important;
 }
