@@ -124,3 +124,8 @@ h1 .content {
 .floating-label.desktop {
 	display: none !important;
 }
+
+/* hide search bar */
+.search-wrapper {
+	display: none !important;
+}
