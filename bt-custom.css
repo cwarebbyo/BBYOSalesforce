@@ -146,3 +146,7 @@ h1 .content {
 button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
         display: none !important;
 }
+	
+.back-button {
+	visibility: hidden !important;
+}
