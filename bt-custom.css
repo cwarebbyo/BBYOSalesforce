@@ -68,8 +68,7 @@ img.hero-image {
 .section-wrapper.hero-wrapper {
     min-height: 0 !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    
+    /* padding: 0 !important; */    
 }
 
 /* hide register button */
@@ -166,8 +165,4 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 .hero-overlay {
     background-color: #ffffff !important;
     opacity: 0 !important;
-}
-
-.event-info {
-    margin-top: 0 !important;
 }
