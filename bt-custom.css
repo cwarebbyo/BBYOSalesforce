@@ -167,3 +167,7 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
     background-color: #ffffff !important;
     opacity: 0 !important;
 }
+
+.event-info {
+    margin-top: 0 !important;
+}
