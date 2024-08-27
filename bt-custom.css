@@ -67,6 +67,9 @@ img.hero-image {
 /* apply neon pistachio to seltzer gradient and remove minimum height */
 .section-wrapper.hero-wrapper {
     min-height: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    
 }
 
 /* hide register button */
@@ -158,4 +161,9 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 
 .event-info-wrapper {
 	background-color: #FFFFFF !important;
+}
+
+.hero-overlay {
+    background-color: #ffffff !important;
+    opacity: 0 !important;
 }
