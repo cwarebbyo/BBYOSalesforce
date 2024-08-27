@@ -151,3 +151,7 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 .back-button {
 	visibility: hidden !important;
 }
+
+.cover-image {
+	width: 100% !important;
+}
