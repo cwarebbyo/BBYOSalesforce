@@ -155,3 +155,7 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 .cover-image {
 	width: 100% !important;
 }
+
+.event-info-wrapper {
+	background-color: #FFFFFF !important;
+}
