@@ -124,11 +124,13 @@ h1 .content {
     color: var(--primaryColorContrast) !important;
 }
 
-/* mobile calendar display */
+/* mobile calendar display
 @media all and (min-width:0px) and (max-width:450px) {
 .product-item__imgContainer {
 	display: none !important;
 }
+*/
+
 .product-item__eventDetails {
 	max-width: 100% !important;
 	box-sizing: unset !important;
