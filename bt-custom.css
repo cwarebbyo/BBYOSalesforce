@@ -164,5 +164,9 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 
 .hero-overlay {
     background-color: #ffffff !important;
-    opacity: 0 !important;
+    opacity: 1 !important;
+}
+
+.events-app {
+    background-color: #ffffff !important;
 }
