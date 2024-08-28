@@ -133,3 +133,8 @@ h1 .content {
 .back-button {
 	visibility: hidden !important;
 }
+
+.search.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
+	display: none !important;
+}
+	
