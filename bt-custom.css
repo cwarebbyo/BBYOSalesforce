@@ -1,14 +1,24 @@
 /* hide register button */
 button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
-    display: none;
+    display: none !important;
 }
-
-/* hide register button */
 button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
-    display:none;
+    display:none !important;
 }
 
-/* hide get tickets button on desktop and mobile */
+/* hide back button, search, language selector, and get tickets button*/
+button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
+        display: none !important;
+}
+.search.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
+	display: none !important;
+}
+button.mat-focus-indicator.mat-menu-trigger.language-selector-button.mat-button.mat-button-base {
+	display: none !important;
+}
+button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+	display: none !important;
+}
 .get-tickets-button, .mobile-registration-action-container.ng-star-inserted {
  display: none !important;
 }
@@ -64,18 +74,16 @@ img.hero-image {
     display: none !important;
 }
 
-/* apply neon pistachio to seltzer gradient and remove minimum height */
+/* update layout and colors for event layout */
 .section-wrapper.hero-wrapper {
     min-height: 0 !important;
     box-shadow: none !important;
-    /* padding: 0 !important; */    
 }
 
 /* hide register button */
 button.register-button.ng-star-inserted {
 	display: none !important;
 }
-
 button.register-button {
 	display: none !important;
 }
@@ -125,13 +133,6 @@ h1 .content {
     color: var(--primaryColorContrast) !important;
 }
 
-/* mobile calendar display
-@media all and (min-width:0px) and (max-width:450px) {
-.product-item__imgContainer {
-	display: none !important;
-}
-*/
-
 .product-item__eventDetails {
 	max-width: 100% !important;
 	box-sizing: unset !important;
@@ -145,11 +146,11 @@ h1 .content {
 	display: none !important;
 }
 
-/* hide back button on events */
-button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
-        display: none !important;
+/* hide search bar */
+.search-wrapper, .language-selector {
+	display: none !important;
 }
-	
+
 .back-button {
 	visibility: hidden !important;
 }
