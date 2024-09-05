@@ -1,17 +1,26 @@
-/* hide back button*/
-button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
-	display:none;
+/* hide register button */
+button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display: none !important;
+}
+button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display:none !important;
 }
 
+/* hide back button, search, language selector, and get tickets button*/
+button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
+	display: none !important;
+}
 .search.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
 	display: none !important;
 }
-
 button.mat-focus-indicator.mat-menu-trigger.language-selector-button.mat-button.mat-button-base {
 	display: none !important;
 }
 button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
 	display: none !important;
+}
+.get-tickets-button, .mobile-registration-action-container.ng-star-inserted {
+ display: none !important;
 }
 
 /* change color of calendar day icon */
@@ -65,12 +74,11 @@ img.hero-image {
     display: none !important;
 }
 
-/* apply neon pistachio to seltzer gradient and remove minimum height */
+/* update layout and colors for event layout */
 .section-wrapper.hero-wrapper {
-    background: linear-gradient(to bottom, #80e83a, #25e4de) !important;
     min-height: 0 !important;
+    box-shadow: none !important;
 }
-
 
 /* hide bottom sign-up section */
 section.section-wrapper.event-register-wrapper.ng-star-inserted {
@@ -117,11 +125,6 @@ h1 .content {
     color: var(--primaryColorContrast) !important;
 }
 
-/* mobile calendar display */
-/* @media all and (min-width:0px) and (max-width:450px) {
-.product-item__imgContainer {
-	display: none !important;
-} */
 .product-item__eventDetails {
 	max-width: 100% !important;
 	box-sizing: unset !important;
@@ -139,9 +142,24 @@ h1 .content {
 .search-wrapper, .language-selector {
 	display: none !important;
 }
-	
+
 .back-button {
 	visibility: hidden !important;
 }
 
+.cover-image {
+	width: 100% !important;
+}
 
+.event-info-wrapper {
+	background-color: #FFFFFF !important;
+}
+
+.hero-overlay {
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.events-app {
+    background-color: #ffffff !important;
+}
