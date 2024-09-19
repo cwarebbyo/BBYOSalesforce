@@ -16,12 +16,13 @@ button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-i
 button.mat-focus-indicator.mat-menu-trigger.language-selector-button.mat-button.mat-button-base {
 	display: none !important;
 }
+/*
 button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
 	display: none !important;
 }
 .get-tickets-button, .mobile-registration-action-container.ng-star-inserted {
  display: none !important;
-}
+} */
 
 /* change color of calendar day icon */
 .event-keyword.ng-star-inserted {
