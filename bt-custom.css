@@ -1,10 +1,10 @@
 /* hide register button */
-button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+/* button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
     display: none !important;
 }
 button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
     display:none !important;
-}
+} */
 
 /* hide back button, search, language selector, and get tickets button*/
 button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
