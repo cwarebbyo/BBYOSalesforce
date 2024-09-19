@@ -1,1 +1,170 @@
+/* hide register button */
+/*
+button.mat-focus-indicator.button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display: none !important;
+}
+button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+    display:none !important;
+} */
 
+/* hide back button, search, language selector, and get tickets button*/
+button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
+	display: none !important;
+}
+.search.ng-untouched.ng-pristine.ng-valid.ng-star-inserted {
+	display: none !important;
+}
+button.mat-focus-indicator.mat-menu-trigger.language-selector-button.mat-button.mat-button-base {
+	display: none !important;
+}
+/* button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.mat-button-base.ng-star-inserted {
+	display: none !important;
+}
+.get-tickets-button, .mobile-registration-action-container.ng-star-inserted {
+ display: none !important;
+} */
+
+/* change color of calendar day icon */
+.event-keyword.ng-star-inserted {
+    color: #25e4de;
+}
+
+.event-keyword {
+    color:#25e4de;
+}
+
+/* Hide closed icon on event page */
+.floating-label.desktop.ng-star-inserted {
+    display: none;
+}
+
+.floating-label.desktop {
+    display: none;
+}
+
+/* Registration confirmation message size */
+h1.ng-star-inserted {
+    font-size: larger;
+}
+
+h1 {
+    font-size: larger;
+}
+
+/* change color of calendar day icon on calendar list view */
+.bt-date-badge__month {
+   background-color: #25e4de !important;
+   color: #1F2937 !important;
+}
+
+ 
+/* hide and change color of price background on calendar list view */
+.product-item__price {
+   /* background-color: #5BA55E  !important; */
+   display: none !important;
+}
+
+/* full width styling */
+
+/* hide hero background image */
+img.hero-image.ng-star-inserted {
+    display: none !important;
+}
+
+img.hero-image {
+    display: none !important;
+}
+
+/* update layout and colors for event layout */
+.section-wrapper.hero-wrapper {
+    min-height: 0 !important;
+    box-shadow: none !important;
+}
+
+/* hide bottom sign-up section */
+section.section-wrapper.event-register-wrapper.ng-star-inserted {
+	display: none !important;
+}
+section.section-wrapper.event-register-wrapper {
+	display: none !important;
+}
+
+/* change headline font size */
+h1 .content {
+	font-size: 2rem !important;
+}
+
+/* change date font size */
+.event-date.ng-star-inserted {
+	font-size: 1.25rem !important;
+}
+.event-date {
+	font-size: 1.25rem !important;
+}
+
+.event-time.ng-star-inserted {
+	font-size: 1.25rem !important;
+}
+.event-time {
+	font-size: 1.25rem !important;
+}
+
+/* hide event location on first page */
+.event-location-wrapper.ng-star-inserted {
+	display: none !important;
+}
+.event-location-wrapper {
+	display: none !important;
+}
+
+/* update discount code apply button style */
+.apply-button {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+    text-transform: capitalize;
+    background-color: var(--primaryColorOriginal) !important;
+    color: var(--primaryColorContrast) !important;
+}
+
+.product-item__eventDetails {
+	max-width: 100% !important;
+	box-sizing: unset !important;
+}
+.product-item__date {
+	display: inline-flex !important;
+}
+
+/* hide closed banner */
+.floating-label.desktop {
+	display: none !important;
+}
+
+/* hide search bar */
+.search-wrapper, .language-selector {
+	display: none !important;
+}
+
+.back-button {
+	visibility: hidden !important;
+}
+
+.cover-image {
+	width: 100% !important;
+}
+
+.event-info-wrapper {
+	background-color: #FFFFFF !important;
+}
+
+.hero-overlay {
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.events-app {
+    background-color: #ffffff !important;
+}
+
+.location {
+    display: none !important;
+}
