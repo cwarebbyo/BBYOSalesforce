@@ -81,12 +81,13 @@ img.hero-image {
 }
 
 /* hide register button */
+/*
 button.register-button.ng-star-inserted {
 	display: none !important;
 }
 button.register-button {
 	display: none !important;
-}
+} */
 
 /* hide bottom sign-up section */
 section.section-wrapper.event-register-wrapper.ng-star-inserted {
