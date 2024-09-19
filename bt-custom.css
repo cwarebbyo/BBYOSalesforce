@@ -173,3 +173,8 @@ h1 .content {
 .events-app {
     background-color: #ffffff !important;
 }
+
+/* Hide Location */
+.location {
+    display: none !important;
+}
