@@ -168,3 +168,8 @@ h1 .content {
 .location {
     display: none !important;
 }
+
+/* hide ticket selection */
+.ticket-count-wrapper .custom-form-field.select.ng-star-inserted {
+    display: none !important;
+}
