@@ -1,1 +1,81 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'GraphikRegular';
+     src: url('/sfsites/c/resource/GraphikFont/Graphik-Regular.woff') format('woff');
+}
 
+@font-face {
+    font-family: 'GraphikBold';
+     src: url('/sfsites/c/resource/GraphikFont/Graphik-Bold.woff') format('woff');
+}
+
+/* Navigation */
+.themeNav-align-distributed {
+    font-size: 1.25em !important;
+    color: #FFFFFF !important;
+}
+.forceCommunityThemeNav .mainNavItem .linkBtn{
+    color: #ffffff!important;
+}
+/* Universal Stylings */
+.slds-button {
+    font-size: 1.25em !important;
+}
+
+.themeUtil.themeProfileMenu {
+    display: none !important;
+}
+
+/* login page - System Down */
+.salesforceIdentityLoginBody2 {
+    background-color: #ffffff !important;
+    background-image: url('../siteDownImg.jpg') !important;
+}
+
+.salesforceIdentityLoginBody2 .cCenterPanel {
+    max-width: 2160px !important;
+    margin: 0!important;
+    width: 100%;
+    background-image: url('../siteDownImg.jpg') !important;
+}
+
+.salesforceIdentityLoginBody2 .cCenterPanel:before{
+    bottom: 0!important;
+}
+
+/* Hide Chatter Actions */
+.chatterActionContainer {
+    display: none !important;
+}
+
+/* Tool Tips */
+.slds-popover_tooltip,
+.slds-popover--tooltip {
+    background: white !important;
+}
+
+/* Screen Flow Container */
+.flowRuntimeForFlexipage, .forceCommunityFlowCommunity {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.flowruntimeBody__lwc, .slds-p-horizontal_small, .slds-p-horizontal--small {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Blackthorn Events App */
+.events-app {
+    background-color: #ffffff !important;
+}
+
+/* Community Component Padding */
+.forceCommunitySection .cb-section_column:only-child {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.siteforceContentArea .comm-layout-column .ui-widget:not(:last-child), .siteforceContentArea .cb-section_column .ui-widget:not(:last-child) {
+    margin-bottom: 0px !important;
+}
