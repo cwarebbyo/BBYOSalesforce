@@ -86,26 +86,6 @@
     font-size: 16px !important;
 }
 
-
-/* login page - System Down */
-/*
-.salesforceIdentityLoginBody2 {
-    background-color: #ffffff !important;
-    background-image: url('../siteDownImg.jpg') !important;
-}
-
-.salesforceIdentityLoginBody2 .cCenterPanel {
-    max-width: 2160px !important;
-    margin: 0!important;
-    width: 100%;
-    background-image: url('../siteDownImg.jpg') !important;
-}
-
-.salesforceIdentityLoginBody2 .cCenterPanel:before{
-    bottom: 0!important;
-}
-*/
-
 /* Hide Chatter Actions */
 .chatterActionContainer {
     display: none !important;
