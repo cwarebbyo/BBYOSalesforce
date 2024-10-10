@@ -170,6 +170,6 @@ h1 .content {
 }
 
 /* hide ticket selection */
-.ticket-count-wrapper .custom-form-field.select {
+/* .ticket-count-wrapper .custom-form-field.select {
     display: none !important;
-}
+} */
