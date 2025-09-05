@@ -123,7 +123,7 @@
 .comm-page-custom-calendar-new .event-detail .pill.category,
 .comm-page-custom-event-new .event-detail .pill.category,
 .comm-page-custom-register-new .event-detail .pill.category,
-.comm-page-custom-public-calendar .event-detail .pill.category { background-color: #80e83a; color: #000; }
+.comm-page-custom-public-calendar .event-detail .pill.category { background-color: #80e83a; color: #000; display: none; }
 
 /* Page-targeted visibility for action buttons
    - calendar: hide register-now
