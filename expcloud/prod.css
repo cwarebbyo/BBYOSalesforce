@@ -1,0 +1,400 @@
+/* =============================
+   Experience Cloud CSS — Fully Consolidated (v4)
+   Date: 2025‑08‑21
+   Pages covered:
+   - .comm-page-custom-calendar-new
+   - .comm-page-custom-event-new
+   - .comm-page-custom-register-new
+   - .comm-page-custom-public-calendar
+   - .comm-page-custom-pre-registration-new
+
+   Principles:
+   • No CSS variables, :is(), :where(), or @layer.
+   • Centralized typography + pill colors for all pages.
+   • Shared hero/layout for Event + Register with tiny overrides.
+   • Page-targeted visibility for .learn-more / .register-now.
+   • Reusable utility buttons: .secondary-button / .primary-button.
+   ============================= */
+
+/* ——— Fonts (prune faces you don’t use to reduce size) ——— */
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-Regular.woff') format('woff'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-RegularItalic.woff') format('woff'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-Semibold-Cy-Gr-Web.woff2') format('woff2'), url('/s/Graphik-Semibold-Cy-Gr-Web.woff') format('woff'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-Bold.woff') format('woff'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-BoldItalic.woff') format('woff'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Graphik Web'; src: url('/s/Graphik-Black-Cy-Gr-Web.woff2') format('woff2'), url('/s/Graphik-Black-Cy-Gr-Web.woff') format('woff'); font-weight: 800; font-style: normal; }
+@font-face { font-family: 'Gamay'; src: url('/s/gamay-narrow-extrabold.woff2') format('woff2'); font-weight: 900; font-style: bold; }
+@font-face { font-family: 'Gamay'; src: url('/s/gamay-narrow-extrabold-italic.woff2') format('woff2'); font-weight: 900; font-style: italic; }
+
+/* html, body { font-family: 'Graphik Web', Arial, sans-serif; } */
+
+/* ——— Global tweaks ——— */
+.themeNav-align-distributed { font-size: 1.25em !important; color: #FFFFFF !important; }
+.forceCommunityThemeNav .mainNavItem .linkBtn { color: #ffffff !important; }
+.slds-button { font-size: 1.25em !important; }
+.themeUtil.themeProfileMenu { display: none !important; }
+.chatterActionContainer { display: none !important; }
+.slds-popover_tooltip, .slds-popover--tooltip { background: white !important; }
+.slds-card.forceCommunityFlowCommunity .flowruntimeBody__lwc { border: none !important; padding: 0 !important; margin: 0 !important; }
+.events-app { background-color: #ffffff !important; }
+.forceCommunitySection .cb-section_column:only-child { padding-top: 0 !important; padding-bottom: 0 !important; }
+.siteforceContentArea .comm-layout-column .ui-widget:not(:last-child),
+.siteforceContentArea .cb-section_column .ui-widget:not(:last-child) { margin-bottom: 0 !important; }
+
+/* ——— Login page tweaks ——— */
+.login-text { text-align: center; }
+.salesforceIdentityLoginBody2 { background-image: url('../Oct2024LogoBG-SemiCircle.png') !important; background-color: #ffffff !important; background-size: auto 85% !important; background-position: left center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.salesforceIdentityLoginBody2 .cCenterPanel { margin-left: 65% !important; max-width: 400px !important; }
+.salesforceIdentityLoginBody2 .cCenterPanel .forceCommunityTabLayout .slds-tabs_default__nav .slds-tabs_default__item { max-width: 100% !important; }
+@media (max-width: 900px){ .salesforceIdentityLoginBody2 .cCenterPanel { margin: auto !important; max-width: 350px !important; } }
+#password-button { font-size: 1.25em !important; background: #25e4de !important; }
+#sfdc_username_container .slds-icon, #sfdc_password_container .slds-icon, .inputContainer .slds-icon { fill: #1a03b5 !important; width: 1.5em !important; height: 1.5em !important; }
+::placeholder { color: #8D979F !important; }
+#LoginNew .salesforceIdentityLoginForm2 .inputBox, #LoginNew .salesforceIdentityForgotPassword2 .inputBox { width: 85% !important; }
+#LoginNew .salesforceIdentityForgotPassword2 .inputBox { font-size: 16px !important; }
+
+/* ——— Sticky Header Fix ——— */
+.siteforceThemeLayoutStarter.isHeaderPinned-true > .a11y-banner > .header { z-index: 9999; box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); }
+
+/* =============================
+   Public Calendar Header
+   ============================= */
+.comm-page-custom-public-calendar .themeHeader { display:none; }
+.comm-page-custom-public-calendar .spacer { display: none; }
+
+/* =============================
+   SHARED: calendar + event + register (Edit once, affects all)
+   ============================= */
+/* Shared typography */
+.comm-page-custom-pre-registration-new .event-detail .title .event.name,
+.comm-page-custom-calendar-new .event-detail .title .event.name,
+.comm-page-custom-event-new .event-detail .title .event.name,
+.comm-page-custom-register-new .event-detail .title .event.name,
+.comm-page-custom-public-calendar .event-detail .title .event.name { font-weight: 700; color: #1a1a1a; letter-spacing: 0; }
+
+.comm-page-custom-pre-registration-new .event-detail .datetime,
+.comm-page-custom-calendar-new .event-detail .datetime,
+.comm-page-custom-event-new .event-detail .datetime,
+.comm-page-custom-register-new .event-detail .datetime,
+.comm-page-custom-public-calendar .event-detail .datetime { font-weight: 600; font-size: 14px; line-height: 1.5; color: #000; }
+
+.comm-page-custom-pre-registration-new .event-detail .detail-label,
+.comm-page-custom-calendar-new .event-detail .detail-label,
+.comm-page-custom-event-new .event-detail .detail-label,
+.comm-page-custom-register-new .event-detail .detail-label,
+.comm-page-custom-public-calendar .event-detail .detail-label { font-weight: 600; font-size: 14px; line-height: 1.5; color: #000; }
+
+.comm-page-custom-pre-registration-new .event-detail .detail-value,
+.comm-page-custom-calendar-new .event-detail .detail-value,
+.comm-page-custom-event-new .event-detail .detail-value,
+.comm-page-custom-register-new .event-detail .detail-value,
+.comm-page-custom-public-calendar .event-detail .detail-value,
+.comm-page-custom-pre-registration-new .event-detail .description,
+.comm-page-custom-calendar-new .event-detail .description,
+.comm-page-custom-event-new .event-detail .description,
+.comm-page-custom-register-new .event-detail .description,
+.comm-page-custom-public-calendar .event-detail .description { font-weight: 400; font-size: 14px; line-height: 1.5; color: #000; }
+
+/* Shared pills */
+.comm-page-custom-pre-registration-new .event-detail .pills-row,
+.comm-page-custom-calendar-new .event-detail .pills-row,
+.comm-page-custom-event-new .event-detail .pills-row,
+.comm-page-custom-register-new .event-detail .pills-row,
+.comm-page-custom-public-calendar .event-detail .pills-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+
+.comm-page-custom-pre-registration-new .event-detail .pill,
+.comm-page-custom-calendar-new .event-detail .pill,
+.comm-page-custom-event-new .event-detail .pill,
+.comm-page-custom-register-new .event-detail .pill,
+.comm-page-custom-public-calendar .event-detail .pill { display: inline-block; padding: 3px 8px 4px 8px; font-size: 12px; font-weight: 700; letter-spacing: .02em; border-radius: 999px; white-space: nowrap; }
+
+/* Pill colors (change here for universal update) */
+.comm-page-custom-pre-registration-new .event-detail .pill.audience,
+.comm-page-custom-calendar-new .event-detail .pill.audience,
+.comm-page-custom-event-new .event-detail .pill.audience,
+.comm-page-custom-register-new .event-detail .pill.audience,
+.comm-page-custom-public-calendar .event-detail .pill.audience { background-color: #1a03b5; color: #fff; }
+.comm-page-custom-pre-registration-new .event-detail .pill.area,
+.comm-page-custom-calendar-new .event-detail .pill.area,
+.comm-page-custom-event-new .event-detail .pill.area,
+.comm-page-custom-register-new .event-detail .pill.area,
+.comm-page-custom-public-calendar .event-detail .pill.area { background-color: #e42158; color: #fff; }
+.comm-page-custom-pre-registration-new .event-detail .pill.category,
+.comm-page-custom-calendar-new .event-detail .pill.category,
+.comm-page-custom-event-new .event-detail .pill.category,
+.comm-page-custom-register-new .event-detail .pill.category,
+.comm-page-custom-public-calendar .event-detail .pill.category { background-color: #80e83a; color: #000; display: none; }
+
+/* Page-targeted visibility for action buttons
+   - calendar: hide register-now
+   - register: hide both
+   - event: hide learn-more only in hero (elsewhere allowed)
+*/
+.comm-page-custom-calendar-new .register-now,
+.comm-page-custom-public-calendar .register-now { display: none !important; }
+.comm-page-custom-register-new .learn-more,
+.comm-page-custom-register-new .register-now,
+.comm-page-custom-pre-registration-new .register-now { display: none !important; }
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .learn-more { display: none !important; }
+
+/* Flow host container reset on Event & Register */
+.comm-page-custom-event-new flowruntime-flow.flowruntimeFlowRuntime,
+.comm-page-custom-register-new flowruntime-flow.flowruntimeFlowRuntime,
+.comm-page-custom-pre-registration-new flowruntime-flow.flowruntimeFlowRuntime,
+.comm-page-custom-public-calendar flowruntime-flow.flowruntimeFlowRuntime,
+.comm-page-custom-calendar-new flowruntime-flow.flowruntimeFlowRuntime { border: 0; background: transparent !important; margin: 0 !important; padding: 0 !important; }
+
+/* =============================
+   CALENDAR PAGE
+   ============================= */
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="li-item"],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="li-item"] { flex: 1 1 100%; max-width: 100%; margin: 0; box-sizing: border-box; border-radius: 15px; overflow: hidden; background: #ffffff; box-shadow: 0 0 30px rgba(0,0,0,.15); position: relative; z-index: 1; }
+@media (min-width: 960px) and (max-width: 1279px) { .comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="li-item"], .comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="li-item"] { flex: 0 1 calc(33.3333% - 1rem); max-width: calc(33.3333% - 1rem); } }
+@media (min-width: 1280px) { .comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="li-item"], .comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="li-item"] { flex: 0 1 calc(25% - 1rem); max-width: calc(25% - 1rem); } }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap { gap: 1rem; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="list-container"],
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [avcmpbuilder-avonniLayout_avonniLayout-host],
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap,
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-layout__slot[avcmpbuilder-avonniLayout_avonniLayout],
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="div-item"],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap { gap: 1rem; }
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="list-container"],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [avcmpbuilder-avonniLayout_avonniLayout-host],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-layout-wrapper.slds-wrap,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-layout__slot[avcmpbuilder-avonniLayout_avonniLayout],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="div-item"] { overflow: visible; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] c-avonni-layout-item,
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [avcmpbuilder-avonniLayoutItem_avonniLayoutItem-host],
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-list-item-body[avcmpbuilder-avonniList_avonniList] { padding: 0; margin: 0; box-sizing: border-box; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="avonni-card-body-container"],
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="avonni-card-body-container"].avonni-card__media-left { display: flex; flex-direction: column; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] article.avonni-card[avcmpbuilder-avonniCard_avonniCard],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] c-avonni-layout-item,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [avcmpbuilder-avonniLayoutItem_avonniLayoutItem-host],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-list-item-body[avcmpbuilder-avonniList_avonniList] { padding: 0; margin: 0; box-sizing: border-box; }
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="avonni-card-body-container"],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="avonni-card-body-container"].avonni-card__media-left { display: flex; flex-direction: column; }
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] article.avonni-card[avcmpbuilder-avonniCard_avonniCard] { background-color: transparent; color: inherit; padding: 0; border: none; box-shadow: none; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] [data-element-id="avonni-card"],
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] [data-element-id="avonni-card"] { border-radius: 15px; padding: 0; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-list__image_container.slds-grid,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-list__image_container.slds-grid { display: block; position: relative; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-image img,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-image img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px; clip-path: ellipse(125% 85% at 50% 10%); margin: 0; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .avonni-card__content-container,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .avonni-card__content-container { padding: 0; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .rich-card-content,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .rich-card-content { display: block; overflow: visible; white-space: normal; max-height: none; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail { padding: 0 20px 20px; display: flex; flex-direction: column; gap: 10px; margin: 0; }
+/* .comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail > *,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail > * { margin: 0; padding: 0; } */
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail .title .event.name,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail .title .event.name { font-size: 28px; line-height: 1.2; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail .informational-subcard,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail .informational-subcard { background: #d9e1ff; border-radius: 12px; margin: 0; padding: 12px 15px; display: flex; flex-direction: column; gap: 10px; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail .informational-subcard > *,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail .informational-subcard > * { margin: 0; padding: 0; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"] .event-detail .secondary-button.learn-more,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"] .event-detail .secondary-button.learn-more { position: absolute; bottom: 20px; }
+.comm-page-custom-calendar-new [data-element-id="div-main-wrapper"]  .event-detail,
+.comm-page-custom-public-calendar [data-element-id="div-main-wrapper"]  .event-detail {padding: 0 20px 60px;}
+
+/* 2 column calendar layout */
+/*
+.comm-page-custom-calendar-new .avonni-layout__slot .avcmpbuilder-bc-side-panel__main-column {flex-direction: row!important;}
+.comm-page-custom-calendar-new .slds-grid .avonni-primitive-global-header__container .avonni-primitive-global-header__layout c-avonni-layout-item[data-element-id="fsc-primitive-global-header-filters-layout"] {margin: 0; width: 75%;}
+.comm-page-custom-calendar-new .slds-grid .avonni-primitive-global-header__container .avonni-primitive-global-header__layout c-avonni-layout-item[data-element-id="fsc-primitive-global-header-filters-layout"] .slds-grid[data-element-id="ul"] {flex-direction: column;}
+.comm-page-custom-calendar-new .slds-grid .avonni-primitive-global-header__container .avonni-primitive-global-header__layout c-avonni-layout-item[data-element-id="fsc-primitive-global-header-filters-layout"] .slds-grid li .slds-is-relative .slds-button {width:100%; justify-content: space-between;}
+.comm-page-custom-calendar-new .slds-grid .avonni-primitive-global-header__container .avonni-primitive-global-header__layout c-avonni-layout-item[data-element-id="fsc-primitive-global-header-filters-layout"] .slds-grid li .slds-is-relative .slds-dropdown {position: relative; left: 0; right: auto; width: 100%;}
+.comm-page-custom-calendar-new .slds-grid .avonni-primitive-global-header__container .avonni-primitive-global-header__layout c-avonni-layout-item[data-element-id="fsc-primitive-global-header-filters-layout"] .slds-grid li .slds-is-relative .slds-dropdown .slds-p-vertical_xx-small .slds-p-horizontal_small:has(lightning-button){display: flex;}
+*/
+/* Filter styling */
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid button,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid button {color: #000; font-weight: 600;}
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button.slds-button_brand,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button.slds-button_brand {background-color: #1A03B5; border-color: #1A03B5; color: #fff; border-radius: 999px;}
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button.slds-button_brand:hover,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button.slds-button_brand:hover {transform: unset;}
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button[title="Reset"]:after,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button[title="Reset"]:after {background: #1A03B5;}
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button[title="Reset"]:after {border-radius: 20px;}
+.comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-dropdown__list ul .slds-dropdown__item .slds-truncate .slds-m-right_x-small,
+.comm-page-custom-public-calendar [data-element-id="avcmpbuilder-global-header"] .slds-grid li .slds-dropdown .slds-button[title="Reset"]:after {border: 1px solid #000; padding: 1px 0;}
+
+/* Mobile Filter styling */
+@media (max-width: 900px) {
+    .comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid{flex-wrap: wrap;}
+    .comm-page-custom-calendar-new [data-element-id="avcmpbuilder-global-header"] .slds-grid li{flex: 0 40%;}
+}
+
+/* =============================
+   EVENT + REGISTER — Shared hero/layout
+   ============================= */
+.comm-page-custom-event-new .forceCommunityFlowCommunity,
+.comm-page-custom-register-new .forceCommunityFlowCommunity,
+.comm-page-custom-calendar-new .forceCommunityFlowCommunity,
+.comm-page-custom-public-calendar .forceCommunityFlowCommunity,
+.comm-page-custom-pre-registration-new .forceCommunityFlowCommunity { background: transparent !important; border: 0; }
+
+/* Top ellipse cap */
+.comm-page-custom-event-new .themeLayoutStarterWrapper::before,
+.comm-page-custom-register-new .themeLayoutStarterWrapper::before,
+.comm-page-custom-pre-registration-new .themeLayoutStarterWrapper::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 375px; max-height: 375px; pointer-events: none; background: radial-gradient(ellipse 120% 1125px at 50% -750px, #1A03B5 100%, transparent 100%); z-index: -1; }
+.comm-page-custom-event-new .themeLayoutStarterWrapper,
+.comm-page-custom-register-new .themeLayoutStarterWrapper,
+.comm-page-custom-pre-registration-new .themeLayoutStarterWrapper { position: relative; }
+
+/* Hero container */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"],
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"],
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] { width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; background: transparent !important; position: relative; height: auto !important; padding: 32px !important; margin: 0 !important; }
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .slds-m-top_small, .slds-var-p-around_medium,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .slds-m-top_small, .slds-var-p-around_medium,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .slds-m-top_small, .slds-var-p-around_medium { margin: 0; padding: 0; }
+
+/* Two-column hero row */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content { display: flex !important; flex-direction: row !important; align-items: stretch !important; justify-content: space-between; gap: 0; width: 100% !important; max-width: 100% !important; min-height: 300px; position: relative; border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,.15); }
+
+/* Left accent ellipse */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content::before,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content::before,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content::before { content: ""; position: absolute; left: -40px; top: 50%; transform: translateY(-50%); width: 80px; height: 140%; background: #00D7EB; border-radius: 50%; z-index: 0; pointer-events: none; }
+
+/* Columns */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail { order: 1; flex: 1 1 auto !important; min-width: 0; padding: 32px 32px 32px 80px; display: flex; flex-direction: column; justify-content: center; gap: 10px; margin: 0; position: relative; z-index: 1; }
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image { order: 2; flex: 0 0 35% !important; max-width: 35% !important; display: flex; justify-content: flex-end; align-items: center; padding: 0; margin: 0; position: relative; z-index: 1; }
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img { width: 100%; height: 100%; object-fit: cover; clip-path: ellipse(100% 100% at 100% 50%); margin: 0; }
+
+/* Hero title size (event page only) */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .event-detail .title .event.name,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .event-detail .title .event.name,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .event-detail .title .event.name { font-size: 74px; line-height: 1.2; }
+
+/* Hide description & learn‑more inside hero */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .event-detail .description,
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .learn-more,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .event-detail .description,
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .learn-more,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .event-detail .description,
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .learn-more { display: none !important; }
+
+/* Full‑width hero content area on Event & Register */
+.comm-page-custom-event-new [data-element-id="avonni-hero-banner-content-width"],
+.comm-page-custom-register-new [data-element-id="avonni-hero-banner-content-width"],
+.comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-content-width"] { width: 100% !important; max-width: 100% !important; }
+
+/* After‑hero containers centered at 80% width */
+.comm-page-custom-event-new .container.slds-m-bottom_x-small,
+.comm-page-custom-register-new .container.slds-m-bottom_x-small,
+.comm-page-custom-pre-registration-new .container.slds-m-bottom_x-small { margin-left: auto; margin-right: auto; width: 80%; }
+
+/* Eligibility & Notice Card (Event & Register) */
+.comm-page-custom-event-new .event-eligibility,
+.comm-page-custom-event-new .notice,
+.comm-page-custom-register-new .event-eligibility,
+.comm-page-custom-register-new .notice,
+.comm-page-custom-pre-registration-new .event-eligibility,
+.comm-page-custom-pre-registration-new .notice { width: 80%; margin: 20px auto; position: relative; display: flex; flex-direction: column; align-items: flex-start; padding: 34px 28px 28px; background: #fff; border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,.08); background: radial-gradient(circle at 120% 145%, #00D7EB 0 82px, transparent 82px) bottom right / 82px 82px no-repeat, #fff; overflow: visible; }
+.comm-page-custom-event-new .event-eligibility::before,
+.comm-page-custom-register-new .event-eligibility::before,
+.comm-page-custom-pre-registration-new .event-eligibility::before { content: ""; position: absolute; top: -22px; left: 24px; width: 44px; height: 44px; border-radius: 50%; background-color: #00D6DF; background-image: url("/s/info-icon.svg"); background-repeat: no-repeat; background-position: center; background-size: 65% 65%; box-shadow: 0 0 30px rgba(0,0,0,.15); z-index: 2; }
+.comm-page-custom-event-new .event-eligibility .header,
+.comm-page-custom-event-new .notice .header,
+.comm-page-custom-register-new .event-eligibility .header,
+.comm-page-custom-register-new .notice .header,
+.comm-page-custom-pre-registration-new .event-eligibility .header,
+.comm-page-custom-pre-registration-new .notice .header { font-weight: 800; font-size: 28px; line-height: 1.2; margin-bottom: 6px; }
+.comm-page-custom-event-new .event-eligibility .detail,
+.comm-page-custom-event-new .notice .detail,
+.comm-page-custom-register-new .event-eligibility .detail,
+.comm-page-custom-register-new .notice .detail,
+.comm-page-custom-pre-registration-new .event-eligibility .detail,
+.comm-page-custom-pre-registration-new .notice .detail { font-weight: 400; font-size: 18px; line-height: 1.6; color: #000; }
+
+/*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000000' class='bi bi-info-lg' viewBox='0 0 16 16'%3E%3Cpath d='m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'/%3E%3C/svg%3E");*/
+/* Notice Card */
+.comm-page-custom-event-new .notice,
+.comm-page-custom-register-new .notice,
+.comm-page-custom-pre-registration-new .notice { width: 60% !important; display: flex; flex-direction: column; gap: 10px; }
+.comm-page-custom-event-new .notice .centered,
+.comm-page-custom-register-new .notice .centered,
+.comm-page-custom-pre-registration-new .notice .centered { justify-content: center; align-items: center; }
+
+/* Bottom CTA Card */
+.comm-page-custom-event-new .event-cta {position: relative; display: flex; align-items: center; padding: 34px 28px 28px; background: #fff; border-radius: 20px; box-shadow: 0 0 30px rgba(0, 0, 0, .08); overflow: visible;}
+.comm-page-custom-event-new .event-cta .text-container {margin-right: 60px;}
+.comm-page-custom-event-new .event-cta .text-container .header {display: block; font-weight: 800; font-size: 28px; line-height: 1.2; margin-bottom: 6px;}
+.comm-page-custom-event-new .event-cta .text-container .detail {display: block; font-weight: 400; font-size: 18px; line-height: 1.6; color: #000;}
+.comm-page-custom-event-new .event-cta .accent-circle{position: absolute; display: block; background: #1A03B5; width: 50px; height: 100%; right: 0; top: 0; z-index: 0; border-radius: 100% 20px 20px 100%;}
+
+/* Responsive stack for hero on narrow */
+@media (max-width: 900px) {
+  .comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content,
+  .comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content,
+  .comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content { flex-direction: column !important; min-height: unset; }
+  .comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image,
+  .comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image,
+  .comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image { order: 1; flex: 0 0 auto !important; max-width: 100% !important; padding-right: 0; width: 100%; }
+  .comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img,
+  .comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img,
+  .comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-image img { aspect-ratio: 16 / 9; min-height: unset; clip-path: ellipse(100% 100% at 100% 50%); }
+  .comm-page-custom-event-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail,
+  .comm-page-custom-register-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail,
+  .comm-page-custom-pre-registration-new [data-element-id="avonni-hero-banner-background"] .rich-card-content > .event-detail { order: 2; padding: 20px; }
+}
+
+/* =============================
+   Reusable Utility Buttons
+   • .secondary-button  → outline (learn‑more look)
+   • .primary-button    → filled  (register‑now look)
+   ============================= */
+.secondary-button { display: inline-flex; z-index: 1; align-items: center; justify-content: space-between; gap: 6px; box-sizing: border-box; height: 35px; padding: 9px 14px; margin: 0; border-radius: 999px; border: 4px solid #000; background-color: #fff; color: #000; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0; text-decoration: none; transition: border-color .28s ease, gap .28s ease; position: relative; min-width: fit-content; width: auto; cursor: pointer; -webkit-appearance: none; appearance: none; }.secondary-button::after { content: ""; display: inline-block; box-sizing: border-box; width: 17px; height: 17px; padding: 0; border-radius: 50%; background-color: transparent; background-repeat: no-repeat; background-position: center; background-size: 17px 17px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E"); transition: width .28s ease, height .28s ease, padding .28s ease, background-color .28s ease, background-image .28s ease, transform .2s ease; }.secondary-button:hover { border-color: transparent; background-color: transparent; color: #000; }.secondary-button:hover::after { width: 35px; height: 35px; padding: 9px; background-color: #000; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E"); }
+.primary-button { display: inline-flex; z-index: 1; align-items: center; justify-content: space-between; gap: 6px; box-sizing: border-box; height: 35px; padding: 9px 14px; margin: 0; border-radius: 999px; border: none; background-color: #00D7EB; color: #000; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0; text-decoration: none; transition: border-color .28s ease, gap .28s ease; position: relative; min-width: fit-content; width: auto; cursor: pointer; -webkit-appearance: none; appearance: none; }.primary-button::after { content: ""; display: inline-block; box-sizing: border-box; width: 17px; height: 17px; padding: 0; border-radius: 50%; background-color: transparent; background-repeat: no-repeat; background-position: center; background-size: 17px 17px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E"); transition: width .28s ease, height .28s ease, padding .28s ease, background-color .28s ease, background-image .28s ease, transform .2s ease; }.primary-button:hover { background-color: transparent; color: #000; }.primary-button:hover::after { width: 35px; height: 35px; padding: 9px; background-color: #00D7EB; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E"); }
+
+/* If used on SLDS buttons, neutralize default styles */
+.slds-button.primary-button { border: none; background: #00D7EB; }.slds-button.secondary-button { background: #fff; border: 4px solid #000; }
+
+/* ---- Fix: keep primary/secondary buttons content-width & no underline/hover color ---- */
+a.primary-button, a.secondary-button,
+button.primary-button, button.secondary-button {
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: max-content;
+  flex: 0 0 auto !important;
+  text-decoration: none !important;
+  
+}
+
+/* Keep layout tidy (arrow bubble sits beside label) */
+.primary-button, .secondary-button { justify-content: flex-start; }
+
+/* Prevent underline + theme link color from overriding on hover/focus/etc */
+.primary-button:link,
+.primary-button:visited,
+.primary-button:hover,
+.primary-button:focus,
+.primary-button:active,
+.secondary-button:link,
+.secondary-button:visited,
+.secondary-button:hover,
+.secondary-button:focus,
+.secondary-button:active {
+  text-decoration: none !important;
+  color: inherit !important; /* If you prefer, use color:#000 !important; instead */
+}
+
+/* If these are ever used on SLDS buttons, ensure no forced full-width */
+.slds-button.primary-button,
+.slds-button.secondary-button { width: auto !important; }
