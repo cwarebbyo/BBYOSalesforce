@@ -10,11 +10,11 @@
       "content_type": "application/vnd.sfdc.contentbuilder.customblock",
       "icon": "image",
       "editor": {
-        "url": "index.html",
+        "url": "https://github.com/cwarebbyo/BBYOSalesforce/blob/67f4269291faa2bf03dc047da4c6527ae54343ee/mc-footer-cb/index.html",
         "height": 600
       },
       "render": {
-        "url": "content.html"
+        "url": "https://github.com/cwarebbyo/BBYOSalesforce/blob/67f4269291faa2bf03dc047da4c6527ae54343ee/mc-footer-cb/content.html"
       },
       "supportedLocales": ["en-US"]
     }
