@@ -1,0 +1,159 @@
+%%[
+/* Outlook/Word-renderer always uses PNGs (blue) by asset ID */
+var @logo_png_id, @yt_png_id, @x_png_id, @tt_png_id, @sc_png_id, @fb_png_id, @ig_png_id, @li_png_id
+set @logo_png_id = "148378"
+set @yt_png_id   = "148376"
+set @x_png_id    = "148375"
+set @tt_png_id   = "148374"
+set @sc_png_id   = "148373"
+set @fb_png_id   = "148372"
+set @ig_png_id   = "148371"
+set @li_png_id   = "148370"
+
+/* Inline SVG Content Blocks (must contain raw <svg>…> with currentColor) */
+var @logo_svg_block, @fb_svg_block, @ig_svg_block, @sc_svg_block, @li_svg_block, @tt_svg_block, @yt_svg_block, @x_svg_block
+set @logo_svg_block = "148361"
+set @fb_svg_block   = "148368"
+set @ig_svg_block   = "148366"
+set @sc_svg_block   = "148365"
+set @li_svg_block   = "148363"
+set @tt_svg_block   = "148364"
+set @yt_svg_block   = "148362"
+set @x_svg_block    = "148367"
+]%%
+
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+    .w-100 { width:100% !important; display:block !important; }
+    .px-20 { padding-left:20px !important; padding-right:20px !important; }
+    .pt-25 { padding-top:25px !important; }
+    .mobile-center { float:none !important; margin:0 auto !important; text-align:center !important; }
+    .social-td { text-align:center !important; }
+    .social-table { margin:0 auto !important; }
+    .logo-svg { max-width:270px !important; height:auto !important; }
+  }
+  a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; }
+
+  /* Theme color from editor state */
+  .svg-wrap { color: {{colorHex}}; line-height:0; }
+  .svg-wrap svg { display:block; width:100%; height:auto; fill: currentColor !important; }
+
+  .icon-45 svg { width:45px !important; height:45px !important; }
+  .logo-svg svg { width:270px !important; height:89px !important; max-width:270px; }
+</style>
+
+<!-- ===== BBYO MASTER FOOTER (variant: {{variant}}) ===== -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0;">
+  <tr>
+    <td align="center" valign="top">
+
+      <!-- Top margin 25px -->
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr><td height="25" style="line-height:25px; font-size:0;">&nbsp;</td></tr>
+      </table>
+
+      <!--[if mso]><table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:700px; border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0;">
+        <tr>
+          <td class="px-20" style="padding-left:20px; padding-right:20px;">
+
+            <!-- LOGO -->
+            <table role="presentation" align="left" cellspacing="0" cellpadding="0" border="0" class="mobile-center" style="border-collapse:collapse;">
+              <tr>
+                <td style="text-align:left;" class="mobile-center">
+                  <a href="%%=RedirectTo('{{links.logo}}')=%%" target="_blank" style="text-decoration:none;">
+                    <!--[if mso]>
+                      <img src="%%=ContentImageById(@logo_png_id)=%%" width="270" height="89" alt="Logo" style="display:block; border:0; width:270px; height:89px;">
+                    <![endif]-->
+                    <!--[if !mso]><!-->
+                      <span class="svg-wrap logo-svg" style="display:inline-block;">
+                        %%=ContentBlockById(@logo_svg_block)=%%
+                      </span>
+                    <!--<![endif]-->
+                  </a>
+                </td>
+              </tr>
+            </table>
+
+            <!-- SOCIALS -->
+            <table role="presentation" align="right" cellspacing="0" cellpadding="0" border="0" class="mobile-center" style="border-collapse:collapse;">
+              <tr>
+                <td class="social-td pt-25" style="padding-top:37px; text-align:right;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right" class="social-table" style="border-collapse:collapse;">
+                    <tr>
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.facebook}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@fb_png_id)=%%" width="45" height="45" alt="Facebook" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@fb_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.instagram}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@ig_png_id)=%%" width="45" height="45" alt="Instagram" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@ig_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.x}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@x_png_id)=%%" width="45" height="45" alt="X" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@x_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>\
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.youtube}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@yt_png_id)=%%" width="45" height="45" alt="YouTube" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@yt_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.tiktok}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@tt_png_id)=%%" width="45" height="45" alt="TikTok" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@tt_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.snapchat}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@sc_png_id)=%%" width="45" height="45" alt="Snapchat" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@sc_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      <td width="7" style="font-size:0; line-height:0;">&nbsp;</td>
+
+                      <td valign="top" class="icon-45">
+                        <a href="%%=RedirectTo('{{links.linkedin}}')=%%" target="_blank" style="display:inline-block;">
+                          <!--[if mso]><img src="%%=ContentImageById(@li_png_id)=%%" width="45" height="45" alt="LinkedIn" style="display:block; border:0;"><![endif]-->
+                          <!--[if !mso]><!--><span class="svg-wrap" style="display:inline-block;">%%=ContentBlockById(@li_svg_block)=%%</span><!--<![endif]-->
+                        </a>
+                      </td>
+                      
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <div style="clear:both; line-height:0; font-size:0;">&nbsp;</div>
+          </td>
+        </tr>
+      </table>
+      <!--[if mso]></td></tr></table><![endif]-->
+
+      <!-- Bottom margin 25px -->
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr><td height="25" style="line-height:25px; font-size:0;">&nbsp;</td></tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+<!-- ===== /BBYO MASTER FOOTER ===== -->
