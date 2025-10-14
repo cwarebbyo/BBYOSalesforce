@@ -10,11 +10,11 @@
       "content_type": "application/vnd.sfdc.contentbuilder.customblock",
       "icon": "image",
       "editor": {
-        "url": "https://github.com/cwarebbyo/BBYOSalesforce/blob/67f4269291faa2bf03dc047da4c6527ae54343ee/mc-footer-cb/index.html",
+        "url": "https://raw.githubusercontent.com/cwarebbyo/BBYOSalesforce/refs/heads/main/mc-footer-cb/content.html",
         "height": 600
       },
       "render": {
-        "url": "https://github.com/cwarebbyo/BBYOSalesforce/blob/67f4269291faa2bf03dc047da4c6527ae54343ee/mc-footer-cb/content.html"
+        "url": "https://raw.githubusercontent.com/cwarebbyo/BBYOSalesforce/refs/heads/main/mc-footer-cb/index.html"
       },
       "supportedLocales": ["en-US"]
     }
