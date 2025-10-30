@@ -7,6 +7,20 @@ button.mat-focus-indicator.action-button.get-tickets-button.mat-raised-button.ma
     display:none !important;
 } */
 
+/* hide header for simple layout */
+.header {
+	display: none !important;
+}
+
+/* hide details for simple layout */
+section.details {
+	display: none !important;
+}
+
+/* make form full width on simple layout */
+	width: 100% !important;
+}
+
 /* hide back button, search, language selector, and get tickets button*/
 button.mat-focus-indicator.back-button.mat-icon-button.mat-button-base.ng-star-inserted {
 	display: none !important;
