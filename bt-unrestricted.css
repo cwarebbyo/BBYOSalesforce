@@ -18,6 +18,7 @@ section.details {
 }
 
 /* make form full width on simple layout */
+section.form {
 	width: 100% !important;
 }
 
