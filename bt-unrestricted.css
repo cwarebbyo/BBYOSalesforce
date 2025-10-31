@@ -206,6 +206,7 @@ h1 .content {
 }
 
 .form .action {
+  display: block !important;
   position: static !important;
   bottom: auto !important;
   left: auto !important;
