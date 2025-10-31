@@ -183,3 +183,40 @@ h1 .content {
 .location {
     display: none !important;
 }
+
+/* Keep core Blackthorn structural elements in DOM for mobile logic,
+   but hide them from the user visually. */
+.header,
+section.details,
+section.section-wrapper.event-register-wrapper,
+.event-location-wrapper,
+.search-wrapper,
+.language-selector {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+
+/* back button: keep DOM, hide affordance */
+.back-button {
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* floating "closed" label and other junk that is safe to truly remove */
+.floating-label.desktop,
+.floating-label.desktop.ng-star-inserted {
+    display: none !important;
+}
+
