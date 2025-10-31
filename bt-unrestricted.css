@@ -202,6 +202,10 @@ h1 .content {
 }
 /* Move the sticky register button into normal flow */
 .action {
+  display: none !important; /* hide all by default */
+}
+
+.form .action {
   position: static !important;
   bottom: auto !important;
   left: auto !important;
@@ -214,9 +218,11 @@ h1 .content {
 }
 
 /* Optional: center the button and make it full width */
-.action .button {
+.form .action .button {
   display: block !important;
   width: 100% !important;
   max-width: 400px !important;
   margin: 0 auto !important;
 }
+
+.
