@@ -193,10 +193,10 @@ h1 .content {
     background-color: var(--surfaceBkgdColor) !important;
     padding: 0 !important;
   }
-  .mat-button-wrapper {
+  /* .mat-button-wrapper {
 	display: none !important;
   }
   .ticket-availability-banner {
 	display: none !important;
-  }
+  } */
 }
