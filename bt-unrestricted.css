@@ -200,3 +200,23 @@ h1 .content {
 	padding: 0 !important;
   } */
 }
+/* Move the sticky register button into normal flow */
+.action {
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-top: 2rem !important; /* space above the button */
+  padding: 1rem 0 !important;
+}
+
+/* Optional: center the button and make it full width */
+.action .button {
+  display: block !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
