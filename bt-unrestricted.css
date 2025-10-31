@@ -183,3 +183,13 @@ h1 .content {
 .location {
     display: none !important;
 }
+/* Force the registration form section to display on mobile */
+@media (max-width: 59.9375rem) {
+  /* always show the form */
+  .form {
+    display: block !important;
+    margin: 1rem 0 6rem 0 !important; /* leave room for sticky bar OR kill sticky below */
+    box-shadow: none !important;
+    background-color: var(--surfaceBkgdColor) !important;
+    padding: 1rem !important;
+  }
