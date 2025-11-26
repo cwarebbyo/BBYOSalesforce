@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "name": "BBYO Master Footer",
+  "description": "Responsive footer with logo and social icons (SDK v1 self-hosted).",
+  "version": "1.0.0",
+  "blocks": [
+    {
+      "id": "bbyo-footer",
+      "label": "BBYO Master Footer",
+      "content_type": "application/vnd.sfdc.contentbuilder.customblock",
+      "icon": "image",
+      "editor": {
+        "url": "index.html",
+        "height": 600
+      },
+      "supportedLocales": [
+        "en-US"
+      ],
+      "supportedTargets": [
+        "html"
+      ]
+    }
+  ]
+}
