@@ -173,3 +173,8 @@ h1 .content {
 .ticket-count-wrapper .custom-form-field.select.ng-star-inserted {
     display: none !important;
 }
+
+body:has(button[aria-label^="Remove"]:not([aria-label*="(Non-US)"]))
+  .payment-option:has(mat-checkbox[aria-describedby="cdk-describedby-message-ng-1-4"]) {
+  display: none !important;
+}
