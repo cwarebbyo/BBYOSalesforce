@@ -174,7 +174,7 @@ h1 .content {
     display: none !important;
 } */
 
-body:has(button[aria-label]:not([aria-label*="(Non-US)"])) 
+body:has(button[aria-label^="Remove"]:not([aria-label*="(Non-US)"]))
   .payment-option:has(mat-checkbox[aria-describedby="cdk-describedby-message-ng-1-4"]) {
   display: none !important;
 }
