@@ -35,7 +35,6 @@
 .chatterActionContainer { display: none !important; }
 .slds-popover_tooltip, .slds-popover--tooltip { background: white !important; }
 .slds-card.forceCommunityFlowCommunity .flowruntimeBody__lwc { border: none !important; padding: 0 !important; margin: 0 !important; }
-.forceCommunityFlowCommunity { border: none !important; }
 .events-app { background-color: #ffffff !important; }
 .forceCommunitySection .cb-section_column:only-child { padding-top: 0 !important; padding-bottom: 0 !important; }
 .siteforceContentArea .comm-layout-column .ui-widget:not(:last-child),
@@ -476,6 +475,28 @@
 }
 
 /* =============================
+   Safari line-clamp fix (KEEP - this one works)
+   =============================
+   Card data is rendered as HTML inside a <p> with slds-line-clamp_x-small.
+   On Safari, -webkit-line-clamp clips nested block children (divs, headings,
+   buttons inside the rich-text) unpredictably — pills get cut off mid-row,
+   event details below the clamp threshold don't render, hover triggers
+   reflow that re-evaluates the clamp. Chrome/Firefox handle nested block
+   children inside line-clamp more leniently.
+
+   Fix: remove the line-clamp ONLY on the actual <p> that has it, not its
+   children. Targets both the SLDS class and Avonni's description class
+   since either may be on the element. */
+.comm-page-custom-public-calendar p.slds-line-clamp_x-small,
+.comm-page-custom-public-calendar p.avonni-list__item-description_font {
+  display: block !important;
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* =============================
    Reusable Utility Buttons
    • .secondary-button  → outline (learn‑more look)
    • .primary-button    → filled  (register‑now look)
@@ -552,4 +573,19 @@ button.primary-button, button.secondary-button {
     min-height: 800px !important;
     height: 1000px !important;
   }
+}
+  /* Normal state */
+  .comm-navigation__sub-menu-item a.highlightButton {
+    color: rgb(31, 41, 52) !important;
+  }
+
+  /* Hover state */
+  .comm-navigation__sub-menu-item a.highlightButton:hover {
+    color: rgb(37, 228, 222) !important;
+  }
+.forceCommunityThemeNav .mainNavItem .linkBtn {
+    color: rgb(31, 41, 52) !important;
+}
+.forceCommunityThemeNav .mainNavItem .linkBtn:hover {
+    color: rgb(37, 228, 222) !important;
 }
